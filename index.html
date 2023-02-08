@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Text Mask Animation</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+  </head>
+  <div class="wrapper">
+    <div>
+        <div class="cover_title" id="title">
+            <p class="cover_link luan" onclick="displayFunc()">Luán</p>
+            <p class="cover_link films" onclick="displayFunc()">Films</p>
+        </div>
+        <div class="cover_button" id="cover_button">
+            <figure>
+                <a href="javascript:displayFunc()">
+                    <img class="cover_play" src="./static/img/botonprueba.png" alt="Boton de Reproduccion">
+                </a>
+            </figure>
+        </div>
+        <div>
+          <video controls autoplay muted loop id="myVideo">
+            <source src="./static/video/DemoVideo.mp4" type="video/mp4">
+          </video>
+          <figure>
+            <img src="./static/img/close_symbol.svg" class="closing_bar" id="close_bar" onclick="undisplayFunc()" alt="Boton de Cierre">
+          </figure>
+        </div>
+    </div>
+    <div class="cursor cursor-outer">
+      <img width="8" height="8" src="./static/img/160574.svg" alt="">
+    </div>
+    <div class="cursor cursor-title">
+      <img width="60" height="60" src="./static/img/boton-play-luanfilms.png" alt="">
+    </div>
+  </div>
+
+  <script src="./static/src/script.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> 
+  <script src="https://codepen.io/username/pen/aBcDef"></script> 
+
+</html>

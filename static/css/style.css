@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'Pierson Regular';
+  src: url('../fonts/Pierson-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Stay Classy';
+  src: url('../fonts/Stay\ Classy\ SLDT.ttf');
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover_title{
+  width: 100%;
+  text-align: center;
+  transition: transform .5s;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cover_link{
+  transition: transform .2s;
+  background: url("https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
+.luan{
+  font-family: Stay Classy, 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+}
+
+.films{
+  font-family: Pierson Regular, 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+}
+
+.cover_button{
+  width: 100%;
+  position: relative;
+}
+
+.cover_play{
+  transition: transform .5s;
+}
+
+.cover_play:hover{
+  transform: scale(1.3);
+}
+
+.cover_title:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+#myVideo {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+#close_bar{
+  display: none;
+  position: absolute;
+  transition: transform .5s;
+}
+
+#close_bar:hover{
+  transform: scale(1.2);
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor-outer {
+  top: -15px;
+  left: -13px;
+  z-index: -1;
+}
+
+.cursor-title {
+  top: -50px;
+  left: -50px;
+  padding: 20px;
+  z-index: 1;
+}
+
+@media (min-width: 300px){
+  .cover_play{
+    width: 12%;
+    height: 12%;
+}
+#close_bar{
+  right: 5vw;
+  top: 5vh;
+  width: 40px;
+  height: 40px;
+}
+.luan{
+  font-size: 80px;
+}
+.films{
+  font-size: 40px;
+}
+.cover_button{
+  margin-top: -10vh;
+}
+}
+
+@media (min-width: 727px){
+  .cover_play{
+      width: 15%;
+      height: 15%;
+  }
+  #close_bar{
+    right: 5vw;
+    top: 5vh;
+    width: 50px;
+    height: 50px;
+  }
+  .luan{
+    font-size: 100px;
+  }
+  .films{
+    font-size: 50px;
+  }
+  .cover_button{
+    margin-top: -15vh;
+  }
+}
+
+@media (min-width: 1200px){
+  .cover_play{
+      width: 20%;
+      height: 20%;
+  }
+  #close_bar{
+    right: 5vw;
+    top: 5vh;
+    width: 75px;
+    height: 75px;
+  }
+  .luan{
+    font-size: 150px;
+  }
+  .films{
+    font-size: 75px;
+  }
+  .cover_button{
+    margin-top: -15vh;
+  }
+}
+
+@media (min-width: 1800px){
+  .cover_play{
+      width: 25%;
+      height: 25%;
+  }
+  #close_bar{
+    right: 5vw;
+    top: 5vh;
+  }
+  .luan{
+    font-size: 240px;
+  }
+  .films{
+    font-size: 120px;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
